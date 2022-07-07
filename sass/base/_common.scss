@@ -1,0 +1,50 @@
+body {
+  background-color: $background-color;
+  color: $main-color;
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
+
+.section {
+  // padding-top: 94px;
+  // padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section--pb0 {
+  padding-bottom: 0;
+}
+
+.section--bg-grey {
+  background-color: $section-color;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $heading-color;
+}
+
+.section__title--mb50 {
+  margin-bottom: 50px;
+}

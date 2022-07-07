@@ -1,0 +1,14 @@
+/* --------- logo ------------------------ */
+.logo {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+
+  @include font(700, 24px, 28px, 0.03em);
+
+  color: $heading-color;
+  text-decoration: none;
+
+  span {
+    color: $accent-color;
+  }
+}
