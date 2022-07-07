@@ -33,7 +33,7 @@
 
 .hero__wrapper {
   text-align: center;
-  @media screen and (max-width: $small - 1px) {
+  @media screen and (max-width: ($small - 1px)) {
     padding: 58px 30px;
   }
 }
