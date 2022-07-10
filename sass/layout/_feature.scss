@@ -1,8 +1,5 @@
 /* ------------------- FEATURE-LIST-------------------------------------- */
 .features {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -13,6 +10,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+
+  @media screen and (max-width: ($large - 1px)) {
+    .section & {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -28,9 +31,10 @@
 
 .features__item {
   width: 100%;
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: ($medium - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @media screen and (min-width: 480px) {
@@ -39,14 +43,10 @@
 
   @media screen and (min-width: 768px) {
     width: 354px;
-    // flex-basis: calc((100% - 60px) / 2);
-    margin-bottom: 30px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 270px;
-    // flex-basis: calc((100% - (4 * 30px)) / 4);
-    margin-bottom: 30px;
   }
 }
 

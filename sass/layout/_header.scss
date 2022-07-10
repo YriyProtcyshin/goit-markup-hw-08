@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
   border-right: 1px solid #ececec;
 
@@ -42,6 +43,11 @@
 }
 
 .main-nav__toggler {
+  position: absolute;
+  z-index: 4;
+  top: 10px;
+  right: 15px;
+
   display: flex;
   margin: 0;
   padding: 0;
@@ -59,9 +65,17 @@
   }
 }
 
-.main-nav__toggler-icon--close {
+.icon-close {
   display: block;
 }
-.main-nav__toggler-icon--open {
+.icon-open {
   display: none;
+}
+
+.is-open .icon-close {
+  display: none;
+}
+
+.is-open .icon-open {
+  display: block;
 }

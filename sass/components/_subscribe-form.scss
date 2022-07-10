@@ -1,0 +1,44 @@
+.subscribe-form {
+  @media screen and (min-width: $large) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.subscribe-form__input {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 15px 16px;
+  margin-bottom: 20px;
+
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: var(--second-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+
+  @media screen and (min-width: $large) {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 358px;
+    height: 50px;
+  }
+}
+
+.subscribe-form__button {
+  &::after {
+    content: '';
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/form/icon-send.svg);
+  }
+}
