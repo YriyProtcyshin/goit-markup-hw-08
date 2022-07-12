@@ -1,5 +1,17 @@
 .form {
-  width: 448px;
+  width: 100%;
+
+  @media screen and (min-width: $small) {
+    width: 370px;
+  }
+
+  @media screen and (min-width: $medium) {
+    width: 370px;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 450px;
+  }
 }
 
 .form__list {
@@ -76,8 +88,9 @@
   resize: none;
   width: 448px;
   height: 120px;
-
   padding: 12px 16px;
+
+  width: 100%;
 
   &::placeholder {
     font-family: 'Roboto';
@@ -89,22 +102,33 @@
 
     color: rgba(117, 117, 117, 0.5);
   }
+  @media screen and (min-width: $small) {
+    width: 370px;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 448px;
+  }
 }
 
 .form__checkbox-label {
   position: relative;
 
-  margin-left: 12px;
-  margin-right: 11px;
-
   padding-left: 24px;
 
   font-family: 'Roboto';
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
 
   color: $main-color;
+
+  @media screen and (min-width: $large) {
+    margin-left: 12px;
+    margin-right: 11px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox-link {

@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WebStudio</title>
 
     <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -15,7 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-
     <!-- styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
@@ -35,6 +36,17 @@
               <a href="#" class="main-nav__link">Контакты</a>
             </li>
           </ul>
+          <button type="button" class="main-nav__toggler">
+            <svg>
+              <use
+                class="icon-close"
+                href="./images/sprite.svg#icon-menu-close"
+                x="10"
+                y="10"
+              ></use>
+              <use class="icon-open" href="./images/sprite.svg#icon-menu-open" x="11" y="11"></use>
+            </svg>
+          </button>
         </nav>
         <ul class="contact-list">
           <li class="contact-list__item">
@@ -54,12 +66,52 @@
             </a>
           </li>
         </ul>
+
+        <div class="mobile-menu">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="./" class="mobile-menu__link">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link active">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="modile-menu__wrapper">
+            <ul class="mobile-menu__contact-list">
+              <li class="mobile-menu__contact-item">
+                <a class="mobile-menu__address" href="tel:+380961111111"> +38 096 111 11 11 </a>
+              </li>
+              <li class="mobile-menu__contact-item">
+                <a class="mobile-menu__mail" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__social">
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <section class="section">
         <div class="container">
-          <ul class="portfolio-filter list">
+          <ul class="portfolio-filter">
             <li class="item"><button type="button" class="button btn-active">Все</button></li>
             <li class="item"><button type="button" class="button">Веб-сайты</button></li>
             <li class="item"><button type="button" class="button">Приложения</button></li>
@@ -71,12 +123,7 @@
             <li class="item">
               <a href="#" class="portfolio-link">
                 <div class="overlay-box">
-                  <img
-                    src="./images/portfolio/project1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <img src="./images/portfolio/project1.jpg" alt="Технокряк" />
                   <div class="overlay">
                     <p class="overlay-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -282,51 +329,53 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer__block">
-          <a href="#" class="footer__logo logo"><span>Web</span>Studio</a>
-          <address class="footer__address">г. Киев, пр-т Леси Украинки, 26</address>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
-            </li>
-          </ul>
-        </div>
+        <div class="footer_wrapper">
+          <div class="footer__block">
+            <a href="#" class="footer__logo logo"><span>Web</span>Studio</a>
+            <address class="footer__address">г. Киев, пр-т Леси Украинки, 26</address>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="footer__social">
-          <p class="footer__title">присоединяйтесь</p>
-          <ul class="social social--grey">
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="footer__social">
+            <p class="footer__title">присоединяйтесь</p>
+            <ul class="social social--grey">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer__subscribe">
@@ -338,5 +387,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

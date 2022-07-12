@@ -5,9 +5,10 @@
   top: 50%;
   left: 50%;
 
-  width: 528px;
+  width: 95%;
+  max-height: 100vh;
 
-  padding: 40px 40px;
+  padding: 40px 20px;
 
   background-color: $white-color;
 
@@ -20,6 +21,16 @@
 
   .backdrop.is-hidden & {
     transform: scale(0.95) translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: $small) {
+    padding: 40px 40px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: $large) {
+    padding: 40px 40px;
+    width: 528px;
   }
 }
 
