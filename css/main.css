@@ -46,6 +46,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -148,6 +150,7 @@ img {
 
 .is-open .mobile-menu {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -1299,6 +1302,10 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+}
+
+.portfolio-projects img {
+  width: 100%;
 }
 
 .portfolio-projects .item {
