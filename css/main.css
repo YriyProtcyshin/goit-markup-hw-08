@@ -875,6 +875,11 @@ img {
   margin-left: auto;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+}
+
+.main-nav__toggler:hover {
+  color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
@@ -885,7 +890,7 @@ img {
 
 .main-nav__toggler:hover .svg-buttons,
 .main-nav__toggler:focus .svg-buttons {
-  fill: #2196f3;
+  fill: currentColor;
 }
 
 .icon-menu {

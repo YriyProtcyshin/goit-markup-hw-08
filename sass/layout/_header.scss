@@ -166,6 +166,11 @@
   margin-left: auto;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent-color;
+  }
 
   @media screen and(min-width: $medium) {
     display: none;
@@ -174,7 +179,8 @@
 
 .main-nav__toggler:hover .svg-buttons,
 .main-nav__toggler:focus .svg-buttons {
-  fill: $accent-color;
+  // fill: $accent-color;
+  fill: currentColor;
 }
 
 .icon-menu {
