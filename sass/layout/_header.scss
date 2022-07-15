@@ -1,7 +1,6 @@
 .header {
   // position: relative;
   border-bottom: 1px solid #ececec;
-  border-right: 1px solid #ececec;
 
   .container {
     @media screen and (min-width: $medium) {
@@ -168,27 +167,28 @@
   background-color: transparent;
   border: 0;
 
-  svg {
-    width: 40px;
-    height: 40px;
-  }
-
   @media screen and(min-width: $medium) {
     display: none;
   }
 }
 
-.icon-close {
+.main-nav__toggler:hover .svg-buttons,
+.main-nav__toggler:focus .svg-buttons {
+  fill: $accent-color;
+}
+
+.icon-menu {
   display: block;
 }
-.icon-open {
+
+.icon-menu-close {
   display: none;
 }
 
-.is-open .icon-close {
+.is-open .icon-menu {
   display: none;
 }
 
-.is-open .icon-open {
+.is-open .icon-menu-close {
   display: block;
 }

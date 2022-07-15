@@ -27,24 +27,19 @@
           <a href="./" class="logo"><span>Web</span>Studio</a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="./" class="main-nav__link">Студия</a>
+              <a href="./" class="main-nav__link main-nav__link--active">Студия</a>
             </li>
             <li class="main-nav__item">
-              <a href="./portfolio.html" class="main-nav__link main-nav__link--active">Портфолио</a>
+              <a href="./portfolio.html" class="main-nav__link">Портфолио</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">Контакты</a>
             </li>
           </ul>
           <button type="button" class="main-nav__toggler">
-            <svg>
-              <use
-                class="icon-close"
-                href="./images/sprite.svg#icon-menu-close"
-                x="10"
-                y="10"
-              ></use>
-              <use class="icon-open" href="./images/sprite.svg#icon-menu-open" x="11" y="11"></use>
+            <svg aria-level="Кнопка мобильного меню" width="40" height="40" class="svg-button">
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+              <use class="icon-menu-close" href="./images/sprite.svg#icon-menu-close"></use>
             </svg>
           </button>
         </nav>
@@ -70,10 +65,10 @@
         <div class="mobile-menu">
           <ul class="mobile-menu__list">
             <li class="mobile-menu__item">
-              <a href="./" class="mobile-menu__link">Студия</a>
+              <a href="./" class="mobile-menu__link active">Студия</a>
             </li>
             <li class="mobile-menu__item">
-              <a href="./portfolio.html" class="mobile-menu__link active">Портфолио</a>
+              <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
             </li>
             <li class="mobile-menu__item">
               <a href="#" class="mobile-menu__link">Контакты</a>

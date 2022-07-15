@@ -47,7 +47,6 @@ p {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 
 .section {
@@ -142,6 +141,16 @@ img {
 
 .logo span {
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+  }
 }
 
 .mobile-menu {
@@ -670,7 +679,6 @@ img {
 
 .header {
   border-bottom: 1px solid #ececec;
-  border-right: 1px solid #ececec;
 }
 
 @media screen and (min-width: 768px) {
@@ -858,30 +866,30 @@ img {
   border: 0;
 }
 
-.main-nav__toggler svg {
-  width: 40px;
-  height: 40px;
-}
-
 @media screen and (min-width: 768px) {
   .main-nav__toggler {
     display: none;
   }
 }
 
-.icon-close {
+.main-nav__toggler:hover .svg-buttons,
+.main-nav__toggler:focus .svg-buttons {
+  fill: #2196f3;
+}
+
+.icon-menu {
   display: block;
 }
 
-.icon-open {
+.icon-menu-close {
   display: none;
 }
 
-.is-open .icon-close {
+.is-open .icon-menu {
   display: none;
 }
 
-.is-open .icon-open {
+.is-open .icon-menu-close {
   display: block;
 }
 
@@ -890,10 +898,16 @@ img {
   height: 400px;
   margin: 0 auto;
   background-color: #c4c4c4;
-  background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero-480x400.jpg);
+  background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero/mobile/img@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero/mobile/img@2x.jpg);
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -905,17 +919,29 @@ img {
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero-768x400.jpg);
+    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero/tablet/img@2x.jpg);
     max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero/tablet/img@2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero.jpg);
+    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero/desctop/img@1x.jpg);
     max-width: 1600px;
     height: 600px;
     padding: 200px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/home/hero/desctop/img@2x.jpg);
   }
 }
 
@@ -1304,10 +1330,6 @@ img {
   gap: 30px;
 }
 
-.portfolio-projects img {
-  width: 100%;
-}
-
 .portfolio-projects .item {
   width: 370px;
   list-style: none;
@@ -1342,7 +1364,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 15px 15px;
   background: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
@@ -1352,12 +1374,30 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 480px) {
+  .portfolio-projects .overlay {
+    padding: 49px 24px 77px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-projects .overlay {
+    padding: 63px 24px;
+  }
+}
+
 .portfolio-projects .overlay-text {
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio-projects .overlay-text {
+    font-size: 18px;
+  }
 }
 
 .portfolio-link {
