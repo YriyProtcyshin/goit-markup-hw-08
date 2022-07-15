@@ -233,10 +233,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-}
-
-.mobile-menu__social-item:not(:last-child) {
-  margin-right: 20px;
+  gap: 20px;
 }
 
 .mobile-menu__social-link {
@@ -253,6 +250,20 @@ img {
 
 .modile-menu__wrapper {
   margin-top: auto;
+}
+
+.mobile-menu__social-item {
+  position: relative;
+}
+
+.mobile-menu__social-item:not(:last-child) .mobile-menu__social-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  height: 100%;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .btn {
