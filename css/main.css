@@ -155,6 +155,13 @@ img {
 
 .mobile-menu {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
 }
 
 @media screen and (max-width: 479px) {
@@ -163,13 +170,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
   }
 }
 
@@ -179,13 +179,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
   }
 }
 
@@ -922,7 +915,7 @@ img {
   cursor: pointer;
 }
 
-.main-nav__toggler:hover {
+.main-nav__toggler:hover, .main-nav__toggler:focus {
   color: #2196f3;
 }
 
@@ -932,8 +925,7 @@ img {
   }
 }
 
-.main-nav__toggler:hover .svg-buttons,
-.main-nav__toggler:focus .svg-buttons {
+.svg-buttons {
   fill: currentColor;
 }
 
