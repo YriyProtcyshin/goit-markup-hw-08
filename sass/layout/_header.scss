@@ -96,8 +96,7 @@
   @media screen and (min-width: $medium) {
     display: block;
     margin-left: auto;
-
-    padding: 21px 0;
+    // padding: 21px 0;
   }
 
   @media screen and (min-width: $large) {
@@ -109,10 +108,6 @@
 
 // =========================================
 
-// .contact-list__item {
-//   list-style: none;
-// }
-
 .contact-list__item + .contact-list__item {
   @media screen and (min-width: 1200px) {
     margin-left: 50px;
@@ -120,9 +115,10 @@
 }
 
 .contact-list__link {
+  display: block;
   font-weight: 500;
   font-size: 12px;
-  line-height: calc(14 / 12);
+  line-height: 1;
   letter-spacing: 0.02em;
 
   align-items: center;
@@ -132,6 +128,18 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: $medium) and (max-width: ($large - 1px)) {
+    &--top {
+      padding-top: 21px;
+      padding-bottom: 5px;
+    }
+
+    &--bottom {
+      padding-top: 5px;
+      padding-bottom: 21px;
+    }
   }
 
   @media screen and (min-width: $large) {
@@ -145,13 +153,36 @@
   }
 }
 
-.contact-list__icon {
+// svg icom mail
+.contact-list__icon--envelope {
+  fill: currentColor;
+
   @media screen and (min-width: $medium) {
     margin-right: 10px;
-    fill: currentColor;
+    width: 14px;
+    height: 10px;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 16px;
+    height: 12px;
   }
 }
 
+// svg icon telefon
+.contact-list__icon--smartphone {
+  fill: currentColor;
+
+  @media screen and (min-width: $medium) {
+    margin-right: 10px;
+    width: 10px;
+    height: 14px;
+  }
+  @media screen and (min-width: $large) {
+    width: 10px;
+    height: 16px;
+  }
+}
 // ----------------------------main-nav__toggler (burger menu) -------------------------------------
 
 .main-nav__toggler {
