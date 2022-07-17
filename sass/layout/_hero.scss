@@ -19,7 +19,7 @@
 
   @media screen and (min-width: $small) {
     max-width: $medium;
-    padding: 118px 60px;
+    padding: 118px 0px;
   }
 
   @media screen and (min-width: $medium) {
@@ -59,16 +59,21 @@
     padding: 58px 30px;
   }
 }
+
 .hero__title {
-  font-family: 'Roboto';
   @include font(900, 26px, 42px, 0.06em);
   text-align: center;
   margin-bottom: 30px;
   text-transform: uppercase;
   color: #ffffff;
 
+  @media screen and (min-width: $medium) {
+    max-width: 360px;
+    margin: 0 auto 30px;
+  }
+
   @media screen and (min-width: $large) {
-    width: 696px;
+    max-width: 696px;
     margin: 0 auto;
     font-weight: 900;
     font-size: 44px;

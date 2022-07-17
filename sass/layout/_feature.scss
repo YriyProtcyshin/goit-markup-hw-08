@@ -51,7 +51,6 @@
 }
 
 .features__title {
-  font-family: 'Roboto';
   @include font(700, 14px, 16px, 0.03em);
 
   text-transform: uppercase;
@@ -59,7 +58,7 @@
 
   margin-bottom: 10px;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: ($medium - 1px)) {
     text-align: center;
   }
 }

@@ -15,7 +15,7 @@
 
   @media (min-width: 480px) and (max-width: 767px) {
     .is-open & {
-      padding: 48px 30px 78px;
+      padding: 48px 30px;
       display: flex;
     }
   }
@@ -50,8 +50,6 @@
   }
 }
 .mobile-menu__link {
-  font-family: 'Roboto';
-
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
@@ -79,19 +77,20 @@
 
 .mobile-menu__address {
   text-decoration: none;
-  font-family: 'Roboto';
-
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  /* identical to box height */
+
   letter-spacing: 0.02em;
   color: #2196f3;
+
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+    line-height: 1.18;
+  }
 }
 
 .mobile-menu__mail {
-  font-family: 'Roboto';
-
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
@@ -99,6 +98,11 @@
 
   color: #757575;
   text-decoration: none;
+
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
 }
 
 // ----------------------- mobile-menu__social -----------------------
@@ -107,24 +111,20 @@
   list-style: none;
   gap: 20px;
 }
-// .mobile-menu__social-item {
-//   &:not(:last-child) {
-//     margin-right: 20px;
-//   }
-// }
 
 .mobile-menu__social-link {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 22px;
-  /* identical to box height, or 122% */
-
+  line-height: 1.83;
   letter-spacing: 0.02em;
 
   color: #2196f3;
   text-decoration: none;
+
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 }
 
 .mobile-menu__wrapper {
